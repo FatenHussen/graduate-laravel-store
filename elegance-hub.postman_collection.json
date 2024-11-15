@@ -1,0 +1,892 @@
+{
+	"info": {
+		"_postman_id": "e764919e-67b1-4327-ae7e-cc95e982c128",
+		"name": "elegance-hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33801004",
+		"_collection_link": "https://orange-robot-189458.postman.co/workspace/New-Team-Workspace~956b5a9b-9c50-4788-95a6-92466f8233ff/collection/33801004-e764919e-67b1-4327-ae7e-cc95e982c128?action=share&source=collection_link&creator=33801004"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}/admin/categories/1"
+							},
+							"response": []
+						},
+						{
+							"name": "getone",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{elegance}}/admin/categories/1"
+							},
+							"response": []
+						},
+						{
+							"name": "filter",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "4|z88U1lGf9ZJKxUnCRdH5x5LzZwKxbpEAhjGbI8vo50d4bc82"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{elegance}}/categories?name=skincare",
+									"host": [
+										"{{elegance}}"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "skincare"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "getall",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "5|nbqI2yq4wEq6g3y96yRmLdTZ3rhynj0223L8qBoScefc00b0"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}/user/products"
+							},
+							"response": []
+						},
+						{
+							"name": "getone",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "5|nbqI2yq4wEq6g3y96yRmLdTZ3rhynj0223L8qBoScefc00b0"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{elegance}}/user/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "New Product",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Description",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "Company",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "50.50",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "images[]",
+											"type": "file",
+											"src": "postman-cloud:///1ef65fb2-c035-4fb0-8609-662e917b53fa"
+										},
+										{
+											"key": "expiration_date",
+											"value": "2025-01-01",
+											"type": "text"
+										},
+										{
+											"key": "ingredients",
+											"value": "ingredients",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}/products"
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"updatename\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{elegance}}/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "{{elegance}}/products/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{elegance}}/user/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "get profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|BXa8TrRFJOAZMOqufKDpREFhPipXPQGCPPNVK1n47ee63a5a"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}user/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "update profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|BXa8TrRFJOAZMOqufKDpREFhPipXPQGCPPNVK1n47ee63a5a"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1ef7a726-64c4-46b0-b691-39ba6df5868e"
+										},
+										{
+											"key": "name",
+											"value": "aya alghadban new",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}user/profile/update"
+							},
+							"response": []
+						},
+						{
+							"name": "update password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|BXa8TrRFJOAZMOqufKDpREFhPipXPQGCPPNVK1n47ee63a5a"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}user/profile/update_password"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "City",
+					"item": [
+						{
+							"name": "get all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|BXa8TrRFJOAZMOqufKDpREFhPipXPQGCPPNVK1n47ee63a5a"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "lang",
+											"value": "ar",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}user/cities/"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"abdallah\",\r\n  \"email\":\"f2002.a.z@gmail.com\",\r\n  \"password_confirmation\": \"password123\",\r\n  \"gender\": \"male\",\r\n  \"phone_number\": \"1234567890\",\r\n  \"birthdate\": \"1990-01-01\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{elegance}}/user/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"lateef.homsy0935931471@gmail.com\",\r\n    \"password\":\"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{elegance}}/user/login"
+							},
+							"response": []
+						},
+						{
+							"name": "Verify OTP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"lateef.homsy0935931471@gmail.com\",\r\n    \"code\":\"246702\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{elegance}}/user/verify_otp"
+							},
+							"response": []
+						},
+						{
+							"name": "Send OTP",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "3|ZZzLfLvM2EX3wiMofpvlcxwUCIvEQTWRPdugUZEmff0b83dc"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ayakhuloud@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}user/send_otp"
+							},
+							"response": []
+						},
+						{
+							"name": "send password",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "fatenhussen1110@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{elegance}}/user/send_password",
+									"host": [
+										"{{elegance}}"
+									],
+									"path": [
+										"user",
+										"send_password"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "fatenhussen1110@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "729972",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}/user/verify_password"
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Password",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "4|5y4qWOQNKbAgpTtYS4mYhmfjvowWx2E2sMlPtFyzedaed9fb"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "new_password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "new_password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{elegance}}/user/reset_password"
+							},
+							"response": []
+						},
+						{
+							"name": "delete account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "4|sXURt7FNo4GcEeZ5hQo3w2WAv1NPD4iyEdCvznFxcf38c5b1"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}user/delete_account"
+							},
+							"response": []
+						},
+						{
+							"name": "verify",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/auth/verify-email/ZJqdY4mJtHHkqRTtnK8S8hylDK4oQxAWghTy6q5DGDeMuSfWjHJfaiu4zXyO"
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{elegance}}/user/logout"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}/admin/categories/1"
+							},
+							"response": []
+						},
+						{
+							"name": "getone",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|j2PYTPNcnHK3mh2FtBA2uyb4X4ShSJ4SpwC7kDJXfe8b94a8"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{elegance}}/admin/categories/1"
+							},
+							"response": []
+						},
+						{
+							"name": "filter",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "4|z88U1lGf9ZJKxUnCRdH5x5LzZwKxbpEAhjGbI8vo50d4bc82"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{elegance}}/categories?name=skincare",
+									"host": [
+										"{{elegance}}"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "skincare"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "getall",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "5|nbqI2yq4wEq6g3y96yRmLdTZ3rhynj0223L8qBoScefc00b0"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{elegance}}/user/products"
+							},
+							"response": []
+						},
+						{
+							"name": "getone",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "5|nbqI2yq4wEq6g3y96yRmLdTZ3rhynj0223L8qBoScefc00b0"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{elegance}}/user/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "price",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{elegance}}/user/products?name=cream&price_min=10&price_max=50",
+									"host": [
+										"{{elegance}}"
+									],
+									"path": [
+										"user",
+										"products"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "cream"
+										},
+										{
+											"key": "price_min",
+											"value": "10"
+										},
+										{
+											"key": "price_max",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
